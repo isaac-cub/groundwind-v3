@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ground Wind Holding — Inversión en bienestar, fitness y desarrollo humano</title>
+  <meta name="description" content="Ground Wind Holding es una sociedad holding de inversión con base en Palma de Mallorca, especializada en compañías de fitness, wellness, salud y desarrollo humano con crecimiento estructural." />
+  <link rel="canonical" href="https://www.groundwind.eu/" />
+  <meta name="theme-color" content="#1c2a21" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ground Wind Holding" />
+  <meta property="og:title" content="Ground Wind Holding — Inversión en bienestar, fitness y desarrollo humano" />
+  <meta property="og:description" content="Holding de inversión especializado en compañías del ámbito del bienestar, la salud y el desarrollo humano. Base en Palma de Mallorca." />
+  <meta property="og:url" content="https://www.groundwind.eu/" />
+  <meta property="og:image" content="https://www.groundwind.eu/assets/groundwind-logo.png" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ground Wind Holding" />
+  <meta name="twitter:description" content="Holding de inversión en bienestar, fitness y desarrollo humano. Palma de Mallorca." />
+  <meta name="twitter:image" content="https://www.groundwind.eu/assets/groundwind-logo.png" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/groundwind-logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       GROUND WIND HOLDING · V3 — modern advisory
+       Warm paper · rounded cards · glass overlays · mono labels
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --paper: #faf8f3;
+      --card: #ffffff;
+      --tile-sage: #e6ecdc;
+      --tile-sand: #f0e9d8;
+      --tile-mist: #dfe8e2;
+      --ink: #141a15;
+      --ink-soft: #566058;
+      --forest: #1c2a21;
+      --forest-2: #141f18;
+      --moss: #5c7263;
+      --sage: #a9b8ab;
+      --cream: #f0ede2;
+      --bronze: #a08c5f;
+      --line: rgba(20, 26, 21, .1);
+      --line-dark: rgba(240, 237, 226, .14);
+      --serif: 'Source Serif 4', Georgia, serif;
+      --sans: 'Archivo', system-ui, sans-serif;
+      --mono: 'IBM Plex Mono', ui-monospace, monospace;
+      --r-lg: 24px;
+      --r-md: 16px;
+      --r-sm: 10px;
+      --shadow-sm: 0 6px 20px rgba(20, 26, 21, .05);
+      --shadow-md: 0 18px 48px rgba(20, 26, 21, .09);
+      --ease: cubic-bezier(.22, 1, .36, 1);
+      --maxw: 1280px;
+      --pad: clamp(20px, 4.5vw, 56px);
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    ::selection { background: rgba(92, 114, 99, .25); }
+    :focus-visible { outline: 2px solid var(--moss); outline-offset: 3px; }
+
+    /* ---------- reveals ---------- */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity .95s var(--ease), transform .95s var(--ease);
+      will-change: opacity, transform;
+    }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal[data-delay="1"] { transition-delay: .1s; }
+    .reveal[data-delay="2"] { transition-delay: .2s; }
+    .reveal[data-delay="3"] { transition-delay: .3s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .logo-track { animation: none !important; }
+      * { animation-duration: .01ms !important; }
+    }
+
+    /* ---------- primitives ---------- */
+    .container { max-width: var(--maxw); margin: 0 auto; padding-left: var(--pad); padding-right: var(--pad); }
+
+    .eyebrow {
+      font-family: var(--mono); font-size: .72rem; font-weight: 500;
+      letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft);
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--bronze); }
+    .eyebrow.on-dark { color: var(--sage); }
+    .eyebrow.center { justify-content: center; display: flex; }
+
+    .h-display {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(2.1rem, 4.2vw, 3.4rem); line-height: 1.12;
+      letter-spacing: -.015em;
+    }
+    .h-display em { font-style: italic; font-weight: 300; color: var(--moss); }
+
+    .sub { color: var(--ink-soft); font-size: 1rem; line-height: 1.85; }
+
+    /* ---------- buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      text-decoration: none; cursor: pointer; border: none;
+      font-family: var(--mono); font-size: .74rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: 16px 28px; border-radius: 999px;
+      transition: transform .25s var(--ease), background .3s ease, color .3s ease, box-shadow .3s ease;
+    }
+    .btn .arr { transition: transform .35s var(--ease); }
+    .btn:hover .arr { transform: translateX(5px); }
+    .btn-dark { background: var(--forest); color: var(--cream); box-shadow: 0 10px 26px rgba(28, 42, 33, .22); }
+    .btn-dark:hover { background: var(--forest-2); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+    .btn-ghost:hover { border-color: var(--ink); transform: translateY(-2px); }
+
+    /* ---------- top bar + nav ---------- */
+    .topbar {
+      background: var(--forest); color: var(--cream);
+      font-family: var(--mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+      text-align: center; padding: 9px var(--pad);
+    }
+    .topbar span { color: var(--sage); }
+
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(250, 248, 243, .88);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s ease;
+    }
+    nav.scrolled { border-bottom-color: var(--line); }
+    .nav-inner {
+      max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad);
+      height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand img { height: 40px; width: auto; object-fit: contain; mix-blend-mode: multiply; }
+
+    .nav-links { list-style: none; display: flex; align-items: center; gap: clamp(18px, 2.4vw, 34px); }
+    .nav-links a {
+      text-decoration: none; font-size: .88rem; font-weight: 500; color: var(--ink-soft);
+      transition: color .2s ease;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta { padding: 12px 22px; font-size: .68rem; }
+
+    .menu-btn {
+      display: none; background: none; border: 1px solid var(--line); border-radius: 999px;
+      cursor: pointer; padding: 10px 18px;
+      font-family: var(--mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink);
+    }
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 1100;
+      background: var(--paper); padding: 110px var(--pad) 40px;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; }
+    .mobile-menu a {
+      display: block; text-decoration: none; padding: 18px 0;
+      font-family: var(--serif); font-size: 1.7rem; color: var(--ink);
+      border-bottom: 1px solid var(--line);
+    }
+    .mobile-close {
+      position: fixed; top: 24px; right: var(--pad); z-index: 1102;
+      background: var(--forest); color: var(--cream); border: none; border-radius: 999px;
+      padding: 12px 20px; font-family: var(--mono); font-size: .7rem; letter-spacing: .12em;
+      text-transform: uppercase; cursor: pointer;
+    }
+
+    /* ---------- hero ---------- */
+    #hero { padding: clamp(48px, 7vw, 90px) 0 clamp(50px, 6vw, 80px); }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.05fr .95fr;
+      gap: clamp(36px, 5vw, 70px); align-items: center;
+    }
+    .hero-title {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(2.6rem, 5.2vw, 4.3rem); line-height: 1.06;
+      letter-spacing: -.02em; margin: 22px 0 24px; max-width: 16ch;
+    }
+    .hero-title em { font-style: italic; font-weight: 300; color: var(--moss); }
+    .hero-sub { max-width: 52ch; margin-bottom: 34px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+
+    .hero-visual { position: relative; }
+    .hero-photo {
+      border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 4 / 4.6;
+      box-shadow: var(--shadow-md); position: relative;
+    }
+    .hero-photo img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
+      filter: saturate(.82) contrast(1.02);
+      transform: scale(1.06);
+      transition: transform 1.6s var(--ease);
+    }
+    .hero-photo.in img { transform: scale(1); }
+    .glass-card {
+      position: absolute; left: 18px; right: 18px; bottom: 18px; z-index: 2;
+      background: rgba(255, 255, 255, .55);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, .55);
+      border-radius: var(--r-md); padding: 20px 22px;
+    }
+    .glass-card p {
+      font-family: var(--serif); font-style: italic; font-size: 1.02rem;
+      line-height: 1.5; color: var(--ink);
+    }
+    .hero-chip {
+      position: absolute; top: 18px; right: 18px; z-index: 2;
+      background: var(--card); border-radius: 999px; padding: 10px 18px;
+      font-family: var(--mono); font-size: .66rem; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--ink); box-shadow: var(--shadow-sm);
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .hero-chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--moss); }
+
+    /* ---------- logo marquee ---------- */
+    .logos { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 26px 0; overflow: hidden; }
+    .logos-inner { display: flex; align-items: center; gap: 40px; }
+    .logos-label { flex-shrink: 0; padding-left: var(--pad); background: var(--paper); position: relative; z-index: 2; }
+    .logo-viewport { overflow: hidden; flex: 1; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+    .logo-track { display: inline-flex; align-items: center; gap: clamp(60px, 8vw, 110px); animation: logoscroll 26s linear infinite; padding-right: clamp(60px, 8vw, 110px); }
+    .logo-track img {
+      height: 52px; width: auto; object-fit: contain;
+      opacity: .55; filter: grayscale(1); mix-blend-mode: multiply;
+      transition: opacity .3s ease, filter .3s ease;
+    }
+    .logo-track img:hover { opacity: 1; filter: grayscale(0); }
+    @keyframes logoscroll { to { transform: translateX(-50%); } }
+
+    /* ---------- about (statement + features) ---------- */
+    #about { padding: clamp(80px, 10vw, 130px) 0; }
+    .statement {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(1.5rem, 2.9vw, 2.3rem); line-height: 1.4;
+      letter-spacing: -.01em; text-align: center;
+      max-width: 30ch; margin: 24px auto 0;
+    }
+    .statement strong { font-weight: 500; }
+    .statement em { font-style: italic; color: var(--moss); }
+    .feature-row {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: clamp(18px, 2.5vw, 30px); margin-top: clamp(48px, 6vw, 72px);
+    }
+    .feature {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--r-md);
+      padding: 26px 24px;
+      transition: transform .35s var(--ease), box-shadow .35s ease;
+    }
+    .feature:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .feature .f-icon {
+      width: 42px; height: 42px; border-radius: 12px; margin-bottom: 18px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .feature:nth-child(1) .f-icon { background: var(--tile-sage); }
+    .feature:nth-child(2) .f-icon { background: var(--tile-sand); }
+    .feature:nth-child(3) .f-icon { background: var(--tile-mist); }
+    .feature:nth-child(4) .f-icon { background: var(--tile-sage); }
+    .feature .f-icon svg { width: 20px; height: 20px; stroke: var(--forest); }
+    .feature h3 {
+      font-family: var(--mono); font-size: .7rem; font-weight: 500;
+      letter-spacing: .16em; text-transform: uppercase; color: var(--bronze);
+      margin-bottom: 10px;
+    }
+    .feature p { color: var(--ink-soft); font-size: .9rem; line-height: 1.75; }
+
+    /* ---------- stats tiles ---------- */
+    #stats { padding-bottom: clamp(80px, 10vw, 130px); }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.5vw, 28px); margin-top: clamp(40px, 5vw, 60px); }
+    .stat-tile {
+      border-radius: var(--r-lg); padding: clamp(28px, 3.4vw, 44px);
+      transition: transform .35s var(--ease);
+    }
+    .stat-tile:hover { transform: translateY(-5px); }
+    .stat-tile:nth-child(1) { background: var(--tile-sage); }
+    .stat-tile:nth-child(2) { background: var(--tile-sand); }
+    .stat-tile:nth-child(3) { background: var(--tile-mist); }
+    .stat-tile strong {
+      display: block; font-family: var(--serif); font-weight: 400;
+      font-size: clamp(2.6rem, 4.4vw, 3.8rem); line-height: 1; letter-spacing: -.02em;
+      margin-bottom: 14px;
+    }
+    .stat-tile strong span { font: inherit; }
+    .stat-tile p { font-size: .88rem; color: var(--ink-soft); line-height: 1.6; max-width: 24ch; }
+    .stats-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+    .stats-head .h-display { max-width: 22ch; margin-top: 20px; }
+
+    /* ---------- identity: photo + 2x2 grid ---------- */
+    #identity { background: var(--forest); color: var(--cream); padding: clamp(80px, 10vw, 130px) 0; }
+    #identity .h-display { color: var(--cream); max-width: 24ch; margin-top: 20px; }
+    #identity .h-display em { color: var(--sage); }
+    #identity .id-sub { color: rgba(240, 237, 226, .62); max-width: 56ch; margin-top: 18px; }
+    .identity-grid {
+      display: grid; grid-template-columns: .92fr 1.08fr;
+      gap: clamp(20px, 3vw, 30px); margin-top: clamp(44px, 6vw, 66px); align-items: stretch;
+    }
+    .identity-photo {
+      border-radius: var(--r-lg); overflow: hidden; position: relative; min-height: 420px;
+    }
+    .identity-photo img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      filter: saturate(.7) brightness(.86);
+      transform: scale(1.05); transition: transform 1.6s var(--ease);
+    }
+    .identity-photo.in img { transform: scale(1); }
+    .identity-photo .glass-card { background: rgba(20, 31, 24, .5); border-color: rgba(240, 237, 226, .16); }
+    .identity-photo .glass-card p { color: var(--cream); }
+    .identity-cells { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 30px); }
+    .id-cell {
+      background: rgba(240, 237, 226, .05);
+      border: 1px solid var(--line-dark); border-radius: var(--r-md);
+      padding: clamp(22px, 2.6vw, 32px);
+      transition: background .35s ease, transform .35s var(--ease);
+    }
+    .id-cell:hover { background: rgba(240, 237, 226, .09); transform: translateY(-4px); }
+    .id-cell h3 {
+      font-family: var(--mono); font-size: .68rem; font-weight: 500;
+      letter-spacing: .16em; text-transform: uppercase; color: var(--bronze);
+      margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+    }
+    .id-cell h3 i { font-style: normal; color: var(--sage); }
+    .id-cell h4 { font-family: var(--serif); font-weight: 400; font-size: 1.22rem; line-height: 1.35; margin-bottom: 10px; }
+    .id-cell p { color: rgba(240, 237, 226, .58); font-size: .87rem; line-height: 1.75; }
+
+    /* ---------- thesis: icon cards ---------- */
+    #thesis { padding: clamp(80px, 10vw, 130px) 0; }
+    .thesis-head { text-align: center; max-width: 720px; margin: 0 auto; }
+    .thesis-head .h-display { margin-top: 20px; }
+    .thesis-head .sub { margin-top: 18px; max-width: 58ch; margin-left: auto; margin-right: auto; }
+    .thesis-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.5vw, 28px); margin-top: clamp(44px, 6vw, 64px); }
+    .thesis-card {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg);
+      padding: clamp(28px, 3vw, 38px);
+      transition: transform .35s var(--ease), box-shadow .35s ease;
+    }
+    .thesis-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .thesis-card .t-icon {
+      width: 46px; height: 46px; border-radius: 14px; margin-bottom: 22px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .thesis-card:nth-child(1) .t-icon { background: var(--tile-sage); }
+    .thesis-card:nth-child(2) .t-icon { background: var(--tile-sand); }
+    .thesis-card:nth-child(3) .t-icon { background: var(--tile-mist); }
+    .thesis-card .t-icon svg { width: 22px; height: 22px; stroke: var(--forest); }
+    .thesis-card h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; margin-bottom: 12px; letter-spacing: -.01em; }
+    .thesis-card p { color: var(--ink-soft); font-size: .92rem; line-height: 1.85; }
+
+    /* ---------- portfolio: glass overlay cards ---------- */
+    #portfolio { padding: 0 0 clamp(80px, 10vw, 130px); }
+    .portfolio-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+    .portfolio-head .h-display { max-width: 22ch; margin-top: 20px; }
+    .portfolio-head .sub { max-width: 44ch; }
+    .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 30px); margin-top: clamp(40px, 5vw, 60px); }
+    .p-card {
+      position: relative; border-radius: var(--r-lg); overflow: hidden;
+      min-height: 560px; display: flex; align-items: flex-end;
+      box-shadow: var(--shadow-sm);
+    }
+    .p-card > img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      filter: saturate(.75) contrast(1.02);
+      transform: scale(1.01); transition: transform 1.2s var(--ease);
+    }
+    .p-card:hover > img { transform: scale(1.06); }
+    .p-card::before {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(20, 31, 24, .06) 30%, rgba(20, 31, 24, .5) 100%);
+    }
+    .p-tag {
+      position: absolute; top: 20px; left: 20px; z-index: 2;
+      background: var(--card); border-radius: 999px; padding: 9px 16px;
+      font-family: var(--mono); font-size: .64rem; font-weight: 500;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--ink);
+    }
+    .p-body {
+      position: relative; z-index: 2; margin: 18px; width: calc(100% - 36px);
+      background: rgba(255, 255, 255, .72);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, .6);
+      border-radius: var(--r-md); padding: clamp(22px, 2.6vw, 30px);
+    }
+    .p-head { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+    .p-logo {
+      width: 56px; height: 56px; flex-shrink: 0; background: #fff;
+      border-radius: 14px; border: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: center; padding: 9px;
+    }
+    .p-logo img { width: 100%; height: 100%; object-fit: contain; }
+    .p-head h3 { font-family: var(--serif); font-weight: 400; font-size: 1.9rem; letter-spacing: -.01em; }
+    .p-body > p { color: var(--ink-soft); font-size: .88rem; line-height: 1.75; margin-bottom: 18px; }
+    .p-body > p strong { color: var(--ink); font-weight: 600; }
+    .p-metrics { display: flex; gap: 10px; flex-wrap: wrap; }
+    .p-metrics span {
+      background: rgba(255, 255, 255, .8); border: 1px solid var(--line);
+      border-radius: 999px; padding: 8px 15px;
+      font-family: var(--mono); font-size: .66rem; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--ink);
+    }
+    .p-metrics span b { color: var(--moss); font-weight: 600; }
+
+    /* ---------- founder: photo + glass quote ---------- */
+    #founder { padding-bottom: clamp(80px, 10vw, 130px); }
+    .founder-card {
+      display: grid; grid-template-columns: .88fr 1.12fr;
+      background: var(--forest); border-radius: var(--r-lg); overflow: hidden;
+      margin-top: clamp(40px, 5vw, 60px); box-shadow: var(--shadow-md);
+    }
+    .founder-photo { position: relative; min-height: 420px; }
+    .founder-photo img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      object-position: center top; filter: saturate(.82);
+    }
+    .founder-overlay {
+      display: flex; flex-direction: column; justify-content: center; gap: 18px;
+      padding: clamp(26px, 3.6vw, 48px);
+    }
+    .founder-quote-card {
+      background: rgba(240, 237, 226, .06);
+      border: 1px solid var(--line-dark);
+      border-radius: var(--r-md); padding: clamp(22px, 3vw, 34px); color: var(--cream);
+    }
+    .founder-quote-card blockquote {
+      font-family: var(--serif); font-style: italic; font-weight: 300;
+      font-size: clamp(1.15rem, 2vw, 1.55rem); line-height: 1.45; margin-bottom: 18px;
+    }
+    .founder-quote-card figcaption { display: flex; flex-direction: column; gap: 3px; }
+    .founder-quote-card figcaption b { font-family: var(--serif); font-style: normal; font-weight: 500; font-size: 1.05rem; }
+    .founder-quote-card figcaption span {
+      font-family: var(--mono); font-size: .64rem; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--sage);
+    }
+    .founder-stat-card {
+      background: rgba(255, 255, 255, .94);
+      border-radius: var(--r-md); padding: clamp(22px, 3vw, 30px);
+    }
+    .founder-stat-card h4 {
+      font-family: var(--mono); font-size: .66rem; font-weight: 500;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--bronze); margin-bottom: 12px;
+    }
+    .founder-stat-card p { font-size: .86rem; color: var(--ink-soft); line-height: 1.7; }
+    .founder-stat-card p strong { color: var(--ink); }
+
+    .founder-copy {
+      display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 60px);
+      margin-top: clamp(34px, 4vw, 50px);
+    }
+    .founder-copy p { color: var(--ink-soft); font-size: .96rem; line-height: 1.9; margin-bottom: 14px; }
+    .founder-copy strong { color: var(--ink); font-weight: 600; }
+
+    /* ---------- contact ---------- */
+    #contact { background: var(--forest); color: var(--cream); padding: clamp(80px, 10vw, 130px) 0; border-radius: var(--r-lg) var(--r-lg) 0 0; }
+    #contact .h-display { color: var(--cream); max-width: 22ch; margin-top: 20px; }
+    #contact .h-display em { color: var(--sage); }
+    .contact-grid {
+      display: grid; grid-template-columns: .95fr 1.05fr;
+      gap: clamp(34px, 5vw, 70px); align-items: start;
+      margin-top: clamp(40px, 5vw, 56px);
+    }
+    .contact-side > p { color: rgba(240, 237, 226, .68); line-height: 1.85; font-size: .98rem; margin-bottom: 26px; max-width: 46ch; }
+    .contact-points { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .contact-points li {
+      display: flex; gap: 14px; align-items: center;
+      background: rgba(240, 237, 226, .05); border: 1px solid var(--line-dark);
+      border-radius: var(--r-sm); padding: 14px 18px;
+      color: rgba(240, 237, 226, .78); font-size: .9rem; line-height: 1.6;
+    }
+    .contact-points li svg { width: 16px; height: 16px; stroke: var(--sage); flex-shrink: 0; }
+    .contact-media { margin-top: 26px; border-radius: var(--r-md); overflow: hidden; aspect-ratio: 16 / 8; }
+    .contact-media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.75) brightness(.9); }
+
+    .form-card { background: var(--card); border-radius: var(--r-lg); padding: clamp(26px, 3.4vw, 44px); color: var(--ink); box-shadow: var(--shadow-md); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 18px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label {
+      font-family: var(--mono); font-size: .64rem; font-weight: 500;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      border: 1px solid var(--line); border-radius: var(--r-sm);
+      background: var(--paper); padding: 14px 16px;
+      font-size: .94rem; font-family: var(--sans); color: var(--ink); outline: none;
+      transition: border-color .25s ease, box-shadow .25s ease;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--moss); box-shadow: 0 0 0 3px rgba(92, 114, 99, .16);
+    }
+    .form-group textarea { min-height: 116px; resize: vertical; }
+    .submit-btn { width: 100%; justify-content: center; margin-top: 6px; }
+    .form-note { margin-top: 14px; font-size: .78rem; color: var(--ink-soft); text-align: center; }
+    .form-ok { display: none; text-align: center; padding: 36px 0; font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--moss); }
+
+    /* ---------- footer ---------- */
+    footer { background: var(--forest-2); color: rgba(240, 237, 226, .6); padding: clamp(56px, 7vw, 80px) 0 36px; }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.3fr 1fr 1fr;
+      gap: clamp(30px, 5vw, 70px); padding-bottom: 44px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+    .footer-brand img { height: 58px; width: auto; background: #fff; padding: 11px 16px; border-radius: var(--r-sm); margin-bottom: 20px; }
+    .footer-brand p { max-width: 34ch; font-size: .88rem; line-height: 1.8; color: rgba(240, 237, 226, .45); }
+    .footer-col h4 {
+      font-family: var(--mono); font-size: .66rem; font-weight: 500;
+      letter-spacing: .16em; text-transform: uppercase; color: var(--bronze); margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { text-decoration: none; font-size: .9rem; color: rgba(240, 237, 226, .68); transition: color .2s ease; }
+    .footer-col a:hover { color: var(--cream); }
+    .footer-col p { font-size: .9rem; line-height: 1.8; color: rgba(240, 237, 226, .68); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+      padding-top: 28px; font-family: var(--mono); font-size: .68rem; letter-spacing: .06em;
+      color: rgba(240, 237, 226, .38);
+    }
+    .footer-bottom a { color: rgba(240, 237, 226, .65); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--cream); }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 1000px) {
+      .nav-links { display: none; }
+      .menu-btn { display: block; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { max-width: 540px; }
+      .feature-row { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .stat-tile p { max-width: none; }
+      .identity-grid { grid-template-columns: 1fr; }
+      .identity-photo { min-height: 340px; }
+      .thesis-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .p-card { min-height: 480px; }
+      .founder-card { grid-template-columns: 1fr; }
+      .founder-photo { min-height: 380px; }
+      .founder-photo img { object-position: center 20%; }
+      .founder-copy { grid-template-columns: 1fr; gap: 0; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .feature-row { grid-template-columns: 1fr; }
+      .identity-cells { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .founder-card { min-height: 440px; }
+      .hero-photo { aspect-ratio: 4 / 4.2; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .logos-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
+      .logos-label { padding-left: 0; }
+      .logos .container-flush { padding: 0 var(--pad); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">Holding de inversión <span>·</span> Palma de Mallorca <span>·</span> groundwind.eu</div>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="brand" aria-label="Ground Wind Holding — inicio">
+        <img src="assets/groundwind-logo.png" alt="Ground Wind Holding" width="400" height="150" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">Holding</a></li>
+        <li><a href="#identity">Visión</a></li>
+        <li><a href="#thesis">Inversión</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#founder">Fundador</a></li>
+        <li><a href="#contact" class="btn btn-dark nav-cta">Contacto <span class="arr" aria-hidden="true">→</span></a></li>
+      </ul>
+      <button class="menu-btn" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">Menú</button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="mobile-close" id="mobile-close" aria-label="Cerrar menú">Cerrar</button>
+    <ul>
+      <li><a href="#about">Holding</a></li>
+      <li><a href="#identity">Visión</a></li>
+      <li><a href="#thesis">Inversión</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#founder">Fundador</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow reveal">Holding de inversión</span>
+          <h1 class="hero-title reveal" data-delay="1">Invertimos en las empresas que definirán el <em>futuro del bienestar humano</em></h1>
+          <p class="sub hero-sub reveal" data-delay="2">
+            Ground Wind Holding es una sociedad holding de inversión con base en Palma de Mallorca, creada para identificar, financiar y acompañar estratégicamente a compañías del ámbito del fitness, el bienestar, la salud y el desarrollo humano con capacidad real de crecimiento sostenido y relevancia de mercado.
+          </p>
+          <div class="hero-actions reveal" data-delay="3">
+            <a href="#contact" class="btn btn-dark">Presenta tu proyecto <span class="arr" aria-hidden="true">→</span></a>
+            <a href="#about" class="btn btn-ghost">Conoce el holding</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal" data-delay="2">
+          <div class="hero-photo" id="hero-photo">
+            <img src="assets/img/wellness-yoga.jpg" alt="Movimiento y bienestar al amanecer junto al mar" width="1400" height="883" loading="eager" />
+            <span class="hero-chip">Palma de Mallorca</span>
+            <div class="glass-card">
+              <p>Una estructura creada para invertir con criterio y permanencia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOGO MARQUEE ============ -->
+    <div class="logos reveal">
+      <div class="logos-inner">
+        <span class="eyebrow logos-label">Portfolio fundacional</span>
+        <div class="logo-viewport">
+          <div class="logo-track" id="logo-track">
+            <img src="assets/zumba-logo.png" alt="Zumba" width="238" height="211" />
+            <img src="assets/mindvalley-logo.png" alt="Mindvalley" width="600" height="600" />
+            <img src="assets/zumba-logo.png" alt="" aria-hidden="true" width="238" height="211" />
+            <img src="assets/mindvalley-logo.png" alt="" aria-hidden="true" width="600" height="600" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about">
+      <div class="container">
+        <span class="eyebrow center reveal">Quiénes somos</span>
+        <p class="statement reveal" data-delay="1"><strong>Ground Wind Holding</strong> es una sociedad holding de inversión constituida en España para adquirir, desarrollar y gestionar participaciones en empresas del universo fitness, wellness, salud, educación transformacional y <em>hábitos de vida saludable</em>.</p>
+
+        <div class="feature-row">
+          <div class="feature reveal">
+            <div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 9l7-6 7 6M7 21V11m10 10V11"/></svg></div>
+            <h3>Naturaleza</h3>
+            <p>Holding de inversión pura, con foco definido en sectores vinculados al bienestar humano.</p>
+          </div>
+          <div class="feature reveal" data-delay="1">
+            <div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 1 8 8c0 5.4-8 12-8 12S4 15.4 4 10a8 8 0 0 1 8-8Z"/></svg></div>
+            <h3>Base</h3>
+            <p>Palma de Mallorca como centro operativo, administrativo y de coordinación corporativa.</p>
+          </div>
+          <div class="feature reveal" data-delay="2">
+            <div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div>
+            <h3>Modelo</h3>
+            <p>Estructura ligera, rigurosa y escalable, diseñada para crecer con disciplina y claridad estratégica.</p>
+          </div>
+          <div class="feature reveal" data-delay="3">
+            <div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <h3>Gobernanza</h3>
+            <p>Dirección liderada por Jeffrey Perlman con soporte operativo corporativo y asesoramiento legal externo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section id="stats">
+      <div class="container">
+        <div class="stats-head reveal">
+          <div>
+            <span class="eyebrow">Trayectoria del portfolio</span>
+            <h2 class="h-display">Trayectorias que respaldan la <em>credibilidad del holding</em></h2>
+          </div>
+          <a href="#portfolio" class="btn btn-ghost">Ver portfolio <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-tile reveal"><strong><span data-count="186">186</span></strong><p>países de presencia histórica de Zumba</p></div>
+          <div class="stat-tile reveal" data-delay="1"><strong><span data-count="15" data-suffix="M">15M</span></strong><p>participantes semanales en clases de Zumba</p></div>
+          <div class="stat-tile reveal" data-delay="2"><strong><span data-count="195" data-suffix="+">195+</span></strong><p>países alcanzados por Mindvalley</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IDENTITY ============ -->
+    <section id="identity">
+      <div class="container">
+        <span class="eyebrow on-dark reveal">Identidad corporativa</span>
+        <h2 class="h-display reveal" data-delay="1">Una tesis clara para un mercado <em>estructuralmente relevante</em></h2>
+        <p class="sub id-sub reveal" data-delay="2">Ground Wind Holding parte de una convicción sencilla: las empresas que mejoran de forma tangible la vida de las personas son también las que tienen mayor capacidad de construir marcas sólidas y valor duradero.</p>
+
+        <div class="identity-grid">
+          <div class="identity-photo reveal" id="identity-photo">
+            <img src="assets/img/lake-contemplation.jpg" alt="Contemplación y serenidad en la naturaleza" width="1800" height="1136" loading="lazy" />
+            <div class="glass-card">
+              <p>Invertir con criterio. Crecer con permanencia.</p>
+            </div>
+          </div>
+          <div class="identity-cells">
+            <div class="id-cell reveal"><h3><i>01</i> Misión</h3><h4>Asignar capital con propósito y disciplina</h4><p>Invertir en compañías que contribuyen de forma real al bienestar, la salud y el desarrollo humano.</p></div>
+            <div class="id-cell reveal" data-delay="1"><h3><i>02</i> Visión</h3><h4>Consolidar un holding de referencia en Europa</h4><p>Construir una plataforma reconocida por su criterio inversor, su reputación y su calidad de portfolio.</p></div>
+            <div class="id-cell reveal" data-delay="2"><h3><i>03</i> Valores</h3><h4>Integridad, exigencia, largo plazo</h4><p>Seleccionar con rigor, operar con coherencia y acompañar cada inversión con vocación de permanencia.</p></div>
+            <div class="id-cell reveal" data-delay="3"><h3><i>04</i> Objetivo</h3><h4>Construir activos empresariales relevantes</h4><p>Desarrollar una cartera de participaciones de alta calidad en categorías con crecimiento estructural y sentido económico.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THESIS ============ -->
+    <section id="thesis">
+      <div class="container">
+        <div class="thesis-head">
+          <span class="eyebrow center reveal">Tesis de inversión</span>
+          <h2 class="h-display reveal" data-delay="1">Un enfoque selectivo en sectores con <em>crecimiento estructural</em></h2>
+          <p class="sub reveal" data-delay="2">Ground Wind Holding prioriza compañías donde la calidad del equipo, la claridad de la propuesta de valor y la capacidad de escalabilidad estén alineadas con una contribución positiva al bienestar humano.</p>
+        </div>
+        <div class="thesis-grid">
+          <div class="thesis-card reveal">
+            <div class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></div>
+            <h3>Sectores prioritarios</h3>
+            <p>Fitness, wellness, salud física y mental, educación transformacional, tecnología aplicada al bienestar y estilos de vida saludables.</p>
+          </div>
+          <div class="thesis-card reveal" data-delay="1">
+            <div class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <h3>Criterios de selección</h3>
+            <p>Equipos sólidos, capacidad de ejecución, mercado relevante, escalabilidad y una propuesta de valor defendible a largo plazo.</p>
+          </div>
+          <div class="thesis-card reveal" data-delay="2">
+            <div class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M2 12h4m12 0h4m-3.5-6.5l-2.8 2.8m-7.4 7.4l-2.8 2.8m0-13l2.8 2.8m7.4 7.4l2.8 2.8"/></svg></div>
+            <h3>Aportación de valor</h3>
+            <p>Además de capital, el holding aporta sensibilidad de marca, criterio estratégico, visión internacional y experiencia real de construcción de compañías de alcance global.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="portfolio-head reveal">
+          <div>
+            <span class="eyebrow">Portfolio fundacional</span>
+            <h2 class="h-display">Experiencias empresariales de <em>alto impacto</em></h2>
+          </div>
+          <p class="sub">Ground Wind Holding se apoya en experiencias empresariales de alto impacto en los sectores del fitness y el desarrollo personal, que constituyen la base reputacional de su posicionamiento.</p>
+        </div>
+        <div class="portfolio-grid">
+          <article class="p-card reveal">
+            <img src="assets/img/nature-path.jpg" alt="" width="1800" height="1200" loading="lazy" />
+            <span class="p-tag">Fitness &amp; movement</span>
+            <div class="p-body">
+              <div class="p-head">
+                <div class="p-logo"><img src="assets/zumba-logo.png" alt="Zumba" width="238" height="211" /></div>
+                <h3>Zumba</h3>
+              </div>
+              <p>Zumba se consolidó como una de las historias de crecimiento más relevantes del fitness global, alcanzando aproximadamente <strong>15 millones de participantes semanales</strong> en clases y presencia en <strong>186 países</strong>. Durante su expansión internacional, llegó a ser reconocido como el mayor programa de fitness con marca del mundo.</p>
+              <div class="p-metrics">
+                <span><b>15M</b> participantes semanales</span>
+                <span><b>186</b> países</span>
+                <span><b>Global</b> branded fitness</span>
+              </div>
+            </div>
+          </article>
+          <article class="p-card reveal" data-delay="1">
+            <img src="assets/img/interior-calm.jpg" alt="" width="1600" height="1067" loading="lazy" />
+            <span class="p-tag">Education &amp; personal growth</span>
+            <div class="p-body">
+              <div class="p-head">
+                <div class="p-logo"><img src="assets/mindvalley-logo.png" alt="Mindvalley" width="600" height="600" /></div>
+                <h3>Mindvalley</h3>
+              </div>
+              <p>Mindvalley se ha consolidado como una de las plataformas más reconocidas del mundo en educación transformacional y crecimiento personal, con alcance internacional, una propuesta diferencial en aprendizaje y una marca de alta influencia dentro del ecosistema del bienestar mental y humano.</p>
+              <div class="p-metrics">
+                <span><b>195+</b> países alcanzados</span>
+                <span><b>Scale</b> crecimiento global</span>
+                <span><b>Brand</b> personal growth</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOUNDER ============ -->
+    <section id="founder">
+      <div class="container">
+        <span class="eyebrow reveal">Fundador</span>
+        <h2 class="h-display reveal" data-delay="1">Visión de marca, sensibilidad de producto y <em>expansión internacional</em></h2>
+
+        <div class="founder-card reveal" data-delay="1">
+          <div class="founder-photo">
+            <img src="assets/jeffrey.webp" alt="Jeffrey Perlman, fundador de Ground Wind Holding" width="1000" height="1000" loading="lazy" />
+          </div>
+          <div class="founder-overlay">
+            <figure class="founder-quote-card">
+              <blockquote>“Las marcas más valiosas no solo venden un producto; cambian comportamientos, crean comunidad y elevan la vida de las personas.”</blockquote>
+              <figcaption>
+                <b>Jeffrey Perlman</b>
+                <span>Fundador &amp; Dirección</span>
+              </figcaption>
+            </figure>
+            <div class="founder-stat-card">
+              <h4>Trayectoria</h4>
+              <p><strong>Former CMO de Zumba</strong> y <strong>Chief Strategy Officer de Mindvalley</strong> — visión de marca, sensibilidad de producto y capacidad de expansión internacional.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="founder-copy reveal">
+          <div>
+            <p>Ground Wind Holding está fundada por <strong>Jeffrey Perlman</strong>, estratega de marca y operador con una trayectoria internacional singular en el ecosistema del bienestar.</p>
+            <p>Su experiencia pública incluye su etapa como <strong>former CMO de Zumba</strong> y su rol como <strong>Chief Strategy Officer de Mindvalley</strong>, dos experiencias que refuerzan una combinación poco frecuente de visión de marca, sensibilidad de producto y capacidad de expansión internacional.</p>
+          </div>
+          <div>
+            <p>Esa experiencia constituye uno de los principales activos diferenciales del holding: una comprensión práctica de cómo nacen, crecen y se posicionan compañías capaces de construir relevancia global.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact">
+      <div class="container">
+        <span class="eyebrow on-dark reveal">Contacto</span>
+        <h2 class="h-display reveal" data-delay="1">Empresas con visión, disciplina y <em>capacidad de impacto</em></h2>
+
+        <div class="contact-grid">
+          <div class="contact-side reveal" data-delay="1">
+            <p>Si tu compañía opera en el ámbito del bienestar, la salud, el fitness o la educación transformacional, Ground Wind Holding está abierta a conocer proyectos con ambición real, fundamentos sólidos y vocación de crecimiento sostenible.</p>
+            <ul class="contact-points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Base operativa en Mallorca.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Foco principal en España, con apertura a oportunidades internacionales.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Holding de inversión pura.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Canal de contacto institucional a través de la web corporativa.</li>
+            </ul>
+            <div class="contact-media">
+              <img src="assets/img/architecture-serene.jpg" alt="Arquitectura serena e integrada en la naturaleza" width="1600" height="1067" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="form-card reveal" data-delay="2">
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="f-name">Nombre</label>
+                  <input id="f-name" name="name" type="text" placeholder="Tu nombre completo" autocomplete="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="f-company">Empresa</label>
+                  <input id="f-company" name="company" type="text" placeholder="Nombre de la empresa" autocomplete="organization" required />
+                </div>
+                <div class="form-group">
+                  <label for="f-email">Email</label>
+                  <input id="f-email" name="email" type="email" placeholder="tu@email.com" autocomplete="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="f-sector">Sector</label>
+                  <select id="f-sector" name="sector">
+                    <option value="">Selecciona…</option>
+                    <option>Fitness y deporte</option>
+                    <option>Wellness</option>
+                    <option>Salud mental</option>
+                    <option>Nutrición</option>
+                    <option>Educación transformacional</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+                <div class="form-group full">
+                  <label for="f-project">Proyecto</label>
+                  <textarea id="f-project" name="project" placeholder="Cuéntanos brevemente qué hacéis, a quién servís y por qué vuestra compañía encaja con Ground Wind Holding."></textarea>
+                </div>
+                <div class="form-group full">
+                  <button type="submit" class="btn btn-dark submit-btn">Enviar propuesta <span class="arr" aria-hidden="true">→</span></button>
+                  <p class="form-note">Trataremos tu información con confidencialidad.</p>
+                </div>
+              </div>
+            </form>
+            <p class="form-ok" id="form-ok">Gracias. Hemos recibido tu propuesta y la revisaremos con atención.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/groundwind-logo.png" alt="Ground Wind Holding" width="400" height="150" />
+          <p>Holding de inversión especializado en compañías del bienestar, la salud y el desarrollo humano.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Secciones</h4>
+          <ul>
+            <li><a href="#about">Holding</a></li>
+            <li><a href="#identity">Visión</a></li>
+            <li><a href="#thesis">Inversión</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#founder">Fundador</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Base corporativa</h4>
+          <p>Palma de Mallorca<br />España</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Ground Wind Holding S.L. · Palma de Mallorca</span>
+        <a href="https://www.groundwind.eu">www.groundwind.eu</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ground Wind Holding",
+    "legalName": "Ground Wind Holding S.L.",
+    "url": "https://www.groundwind.eu",
+    "logo": "https://www.groundwind.eu/assets/groundwind-logo.png",
+    "description": "Sociedad holding de inversión especializada en compañías de fitness, wellness, salud y desarrollo humano.",
+    "founder": { "@type": "Person", "name": "Jeffrey Perlman" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Palma de Mallorca",
+      "addressCountry": "ES"
+    },
+    "areaServed": "Europe",
+    "knowsAbout": ["Investment holding", "Wellness", "Fitness", "Human development", "Transformational education"]
+  }
+  </script>
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var nav = document.getElementById('nav');
+      var menuBtn = document.getElementById('menu-btn');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var mobileClose = document.getElementById('mobile-close');
+
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('scrolled', (window.scrollY || 0) > 10);
+      }, { passive: true });
+
+      function setMenu(open) {
+        mobileMenu.classList.toggle('open', open);
+        mobileMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+      menuBtn.addEventListener('click', function () { setMenu(true); });
+      mobileClose.addEventListener('click', function () { setMenu(false); });
+      mobileMenu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { setMenu(false); });
+      });
+
+      /* reveals */
+      var revealEls = document.querySelectorAll('.reveal, .hero-photo, .identity-photo');
+      if (reduce || !('IntersectionObserver' in window)) {
+        revealEls.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.14, rootMargin: '0px 0px -6% 0px' });
+        revealEls.forEach(function (el) { io.observe(el); });
+      }
+
+      /* counters */
+      function animateCount(el) {
+        var target = parseFloat(el.getAttribute('data-count'));
+        var suffix = el.getAttribute('data-suffix') || '';
+        var start = null, dur = 1500;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 4);
+          el.textContent = Math.round(target * eased) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+          else el.textContent = target + suffix;
+        }
+        requestAnimationFrame(step);
+      }
+      var counters = document.querySelectorAll('[data-count]');
+      if (reduce || !('IntersectionObserver' in window)) {
+        counters.forEach(function (el) { el.textContent = el.getAttribute('data-count') + (el.getAttribute('data-suffix') || ''); });
+      } else {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); }
+          });
+        }, { threshold: 0.6 });
+        counters.forEach(function (el) { cio.observe(el); });
+      }
+
+      /* form */
+      document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        this.style.display = 'none';
+        document.getElementById('form-ok').style.display = 'block';
+      });
+    })();
+  </script>
+</body>
+</html>
