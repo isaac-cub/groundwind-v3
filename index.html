@@ -167,6 +167,7 @@
     }
     .nav-links a:hover { color: var(--ink); }
     .nav-cta { padding: 12px 22px; font-size: .68rem; }
+    .nav-links a.nav-cta, .nav-links a.nav-cta:hover { color: #fff; }
 
     .menu-btn {
       display: none; background: none; border: 1px solid var(--line); border-radius: 999px;
@@ -252,19 +253,23 @@
     .logo-track img:hover { opacity: 1; filter: grayscale(0); }
     @keyframes logoscroll { to { transform: translateX(-50%); } }
 
-    /* ---------- about (statement + features) ---------- */
+    /* ---------- about (intro + features) ---------- */
     #about { padding: clamp(80px, 10vw, 130px) 0; }
+    .about-grid {
+      display: grid; grid-template-columns: .82fr 1.18fr;
+      gap: clamp(40px, 5vw, 76px); align-items: center;
+    }
     .statement {
       font-family: var(--serif); font-weight: 400;
-      font-size: clamp(1.5rem, 2.9vw, 2.3rem); line-height: 1.4;
-      letter-spacing: -.01em; text-align: center;
-      max-width: 30ch; margin: 24px auto 0;
+      font-size: clamp(1.55rem, 2.6vw, 2.15rem); line-height: 1.36;
+      letter-spacing: -.01em; text-align: left;
+      max-width: 24ch; margin: 20px 0 30px;
     }
     .statement strong { font-weight: 500; }
     .statement em { font-style: italic; color: var(--moss); }
     .feature-row {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: clamp(18px, 2.5vw, 30px); margin-top: clamp(48px, 6vw, 72px);
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(18px, 2.2vw, 26px);
     }
     .feature {
       background: var(--card); border: 1px solid var(--line); border-radius: var(--r-md);
@@ -368,6 +373,7 @@
     .thesis-card .t-icon svg { width: 22px; height: 22px; stroke: var(--forest); }
     .thesis-card h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; margin-bottom: 12px; letter-spacing: -.01em; }
     .thesis-card p { color: var(--ink-soft); font-size: .92rem; line-height: 1.85; }
+    .section-cta { display: flex; justify-content: center; margin-top: clamp(38px, 4.5vw, 56px); }
 
     /* ---------- portfolio: glass overlay cards ---------- */
     #portfolio { padding: 0 0 clamp(80px, 10vw, 130px); }
@@ -538,6 +544,7 @@
     }
     .footer-bottom a { color: rgba(240, 237, 226, .65); text-decoration: none; }
     .footer-bottom a:hover { color: var(--cream); }
+    .footer-legal { display: flex; gap: clamp(16px, 2vw, 26px); flex-wrap: wrap; }
 
     /* ---------- responsive ---------- */
     @media (max-width: 1000px) {
@@ -545,6 +552,7 @@
       .menu-btn { display: block; }
       .hero-grid { grid-template-columns: 1fr; }
       .hero-visual { max-width: 540px; }
+      .about-grid { grid-template-columns: 1fr; gap: 34px; }
       .feature-row { grid-template-columns: 1fr 1fr; }
       .stats-grid { grid-template-columns: 1fr; }
       .stat-tile p { max-width: none; }
@@ -635,7 +643,7 @@
     <!-- ============ LOGO MARQUEE ============ -->
     <div class="logos reveal">
       <div class="logos-inner">
-        <span class="eyebrow logos-label">Portfolio fundacional</span>
+        <span class="eyebrow logos-label">Respaldado por</span>
         <div class="logo-viewport">
           <div class="logo-track" id="logo-track">
             <img src="assets/zumba-logo.png" alt="Zumba" width="238" height="211" />
@@ -649,9 +657,12 @@
 
     <!-- ============ ABOUT ============ -->
     <section id="about">
-      <div class="container">
-        <span class="eyebrow center reveal">Quiénes somos</span>
-        <p class="statement reveal" data-delay="1"><strong>Ground Wind Holding</strong> es una sociedad holding de inversión constituida en España para adquirir, desarrollar y gestionar participaciones en empresas del universo fitness, wellness, salud, educación transformacional y <em>hábitos de vida saludable</em>.</p>
+      <div class="container about-grid">
+        <div class="about-intro">
+          <span class="eyebrow reveal">Quiénes somos</span>
+          <p class="statement reveal" data-delay="1"><strong>Ground Wind Holding</strong> es una sociedad holding de inversión constituida en España para adquirir, desarrollar y gestionar participaciones en empresas del universo fitness, wellness, salud, educación transformacional y <em>hábitos de vida saludable</em>.</p>
+          <a href="#contact" class="btn btn-dark reveal" data-delay="2">Presenta tu proyecto <span class="arr" aria-hidden="true">→</span></a>
+        </div>
 
         <div class="feature-row">
           <div class="feature reveal">
@@ -745,6 +756,9 @@
             <p>Además de capital, el holding aporta sensibilidad de marca, criterio estratégico, visión internacional y experiencia real de construcción de compañías de alcance global.</p>
           </div>
         </div>
+        <div class="section-cta reveal">
+          <a href="#contact" class="btn btn-dark">Presenta tu proyecto <span class="arr" aria-hidden="true">→</span></a>
+        </div>
       </div>
     </section>
 
@@ -791,6 +805,9 @@
               </div>
             </div>
           </article>
+        </div>
+        <div class="section-cta reveal">
+          <a href="#contact" class="btn btn-dark">Presenta tu proyecto <span class="arr" aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -921,8 +938,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Ground Wind Holding S.L. · Palma de Mallorca</span>
-        <a href="https://www.groundwind.eu">www.groundwind.eu</a>
+        <span>© 2026 Ground Wind Holding S.L. · Todos los derechos reservados.</span>
+        <nav class="footer-legal" aria-label="Enlaces legales">
+          <a href="#">Aviso legal</a>
+          <a href="#">Política de privacidad</a>
+          <a href="#">Política de cookies</a>
+          <a href="https://www.groundwind.eu">groundwind.eu</a>
+        </nav>
       </div>
     </div>
   </footer>
